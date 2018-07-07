@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Team07
+namespace Oikake
 {
 #if WINDOWS || LINUX
     /// <summary>
