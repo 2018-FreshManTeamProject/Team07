@@ -23,6 +23,15 @@ namespace Oikake.Actor
             DOWN,UP,RIGHT,LEFT
         };
         private Direction direction;
+        private Vector2 stepVelocity;
+        private float stepTime = 0.47f;
+        private Timer stepTimer;
+        private bool stepRelease;
+
+
+        
+
+
         private Dictionary<Direction, Range> directionRange;
 
         public Player(IGameMediator mediator) : base("oikake_player_4anime",mediator)
@@ -39,27 +48,7 @@ namespace Oikake.Actor
                 motion.Add(i, new Rectangle(64 * (i%4), 64 * (i/4), 64, 64));
             }
 
-            //motion.Add(0, new Rectangle(64 * 0, 64 * 0, 64, 64));
-            //motion.Add(1, new Rectangle(64 * 1, 64 * 0, 64, 64));
-            //motion.Add(2, new Rectangle(64 * 2, 64 * 0, 64, 64));
-            //motion.Add(3, new Rectangle(64 * 3, 64 * 0, 64, 64));
-
-            //motion.Add(4, new Rectangle(64 * 0, 64 * 1, 64, 64));
-            //motion.Add(5, new Rectangle(64 * 1, 64 * 1, 64, 64));
-            //motion.Add(6, new Rectangle(64 * 2, 64 * 1, 64, 64));
-            //motion.Add(7, new Rectangle(64 * 3, 64 * 1, 64, 64));
-
-            //motion.Add(8, new Rectangle(64 * 0, 64 * 2, 64, 64));
-            //motion.Add(9, new Rectangle(64 * 1, 64 * 2, 64, 64));
-            //motion.Add(10, new Rectangle(64 * 2, 64 * 2, 64, 64));
-            //motion.Add(11, new Rectangle(64 * 3, 64 * 2, 64, 64));
-
-            //motion.Add(12, new Rectangle(64 * 0, 64 * 3, 64, 64));
-            //motion.Add(13, new Rectangle(64 * 1, 64 * 3, 64, 64));
-            //motion.Add(14, new Rectangle(64 * 2, 64 * 3, 64, 64));
-            //motion.Add(15, new Rectangle(64 * 3, 64 * 3, 64, 64));
-
-            motion.Initialize(new Range(0, 15), new CountDownTimer(0.2f));
+            motion.Initialize(new Range(0, 3), new CountDownTimer(0.2f));
 
             direction = Direction.DOWN;
             directionRange = new Dictionary<Direction, Range>()
@@ -69,53 +58,40 @@ namespace Oikake.Actor
                 {Direction.RIGHT,new Range(8,11) },
                 {Direction.LEFT,new Range(12,15) }
             };
+
+            stepVelocity = Vector2.Zero;
+            stepTimer = new CountUpTimer(stepTime);
+            stepRelease = true;
         }
         public override void Update(GameTime gameTime)
         {
-            Vector2 velocity = Vector2.Zero;
-
-            if( Input.GetKeyState(Keys.Right))
-            {
-                velocity.X = 1f;
-            }
-            if(Input.GetKeyState(Keys.Left))
-            {
-                velocity.X = -1f;
-            }
-            if(Input.GetKeyState(Keys.Up))
-            {
-                velocity.Y = -1f;
-            }
-            if(Input.GetKeyState(Keys.Down))
-            {
-                velocity.Y = 1f;
-            }
-            if( velocity.Length()!=0)
-            {
-                velocity.Normalize();
-            }
-
+            stepTimer.Update(gameTime);
             float speed = 5.0f;
+            
+            if(stepVelocity == Input.Velocity() && stepRelease == true && stepTimer.IsTime() == false )
+            {
+                speed = 100;
+                
+            }
+           
             position = position + Input.Velocity() * speed;
+            if (Input.Velocity() == new Vector2(0, 0))
+            {
+                stepRelease = true;
+
+            }
+            else
+            {
+                stepVelocity = Input.Velocity();
+                stepRelease = false;
+                stepTimer.Initialize();
+
+            }
 
 
+           
+            
 
-            if (position.X < 0.0f)
-            {
-                position.X = 0;
-            }
-            if (position.X >= Screen.Width - 64)
-            {
-                position.X = Screen.Width - 64;
-            }
-            if (position.Y < 0.0f)
-            {
-                position.Y = 0.0f;
-            }
-            if (position.Y >= Screen.Height - 64)
-            {
-                position.Y = Screen.Height - 64;
-            }
 
             var min = Vector2.Zero;
             var max = new Vector2(Screen.Width - 64, Screen.Height - 64);
@@ -125,7 +101,8 @@ namespace Oikake.Actor
             motion.Update(gameTime);
 
 
-        }
+
+        } 
         //public void Draw(Renderer renderer)
         //{
         //    renderer.DrawTexture("white", position);

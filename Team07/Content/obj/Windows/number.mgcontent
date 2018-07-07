@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/number.bmp</SourceFile>
-  <SourceTime>2012-03-19T08:44:10+09:00</SourceTime>
+  <SourceTime>2018-07-07T22:19:02.6307601+09:00</SourceTime>
   <DestFile>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/bin/Windows/number.xnb</DestFile>
-  <DestTime>2018-07-07T20:10:43.9384723+09:00</DestTime>
+  <DestTime>2018-07-07T22:26:49.8518808+09:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
