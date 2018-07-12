@@ -77,7 +77,7 @@ namespace Oikake.Scene
                 
             }
             
-            timer = new CountDownTimer(10);
+            timer = new CountUpTimer(1000);
             timerUI = new TimerUI(timer);
             score = new Score();
 

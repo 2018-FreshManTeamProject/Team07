@@ -33,7 +33,7 @@ namespace Oikake.Scene
 
         public void Initialize()
         {
-            score += 0;
+            score = 600;
             poolScore -= 0;
         }
 
@@ -54,8 +54,8 @@ namespace Oikake.Scene
         {
             if(poolScore > 0)
             {
-                score += 1;
-                poolScore -= 1;
+                score -= 1;
+                poolScore += 0;
             }
           
             
