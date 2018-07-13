@@ -68,14 +68,8 @@ namespace Oikake.Scene
 
             characterManager = new CharacterManager();
             characterManager.Add(new Player(this));
-            characterManager.Add(new Enemy(this));
             characterManager.Add(new BoundEnemy(this));
 
-            for (int i = 0; i < 10; i++)
-            {
-                characterManager.Add(new RandomEnemy(this));
-                
-            }
             
             timer = new CountUpTimer(1000);
             timerUI = new TimerUI(timer);
