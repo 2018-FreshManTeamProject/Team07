@@ -109,7 +109,7 @@ namespace Oikake.Actor
 
 
             var min = Vector2.Zero;
-            var max = new Vector2(Screen.Width - 64, Screen.Height - 64);
+            var max = new Vector2(Screen.Width - 32, Screen.Height - 32);
             position = Vector2.Clamp(position, min, max);
 
             UpdateMotion();
