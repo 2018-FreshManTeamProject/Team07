@@ -3,7 +3,7 @@
   <SourceFile>D:/学校/電算部/チーム制作/Team07-master/Team07/Content/Sound/endingbgm.mp3</SourceFile>
   <SourceTime>2018-07-12T16:37:59.2234528+09:00</SourceTime>
   <DestFile>D:/学校/電算部/チーム制作/Team07-master/Team07/Content/bin/Windows/Sound/endingbgm.xnb</DestFile>
-  <DestTime>2018-07-13T18:05:11.0443191+09:00</DestTime>
+  <DestTime>2018-07-14T10:54:14.9107938+09:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
   <Processor>SongProcessor</Processor>
