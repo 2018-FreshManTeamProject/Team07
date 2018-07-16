@@ -17,7 +17,7 @@ namespace Oikake.Actor
         private static Random rnd = new Random();
         private Sound sound;
         private Timer timer = new CountUpTimer();
-        
+        private Player player;
 
         public BoundEnemy(IGameMediator mediator) : base ("エネミー（通常）", mediator)
         {
@@ -28,9 +28,30 @@ namespace Oikake.Actor
 
         public override void Initialize()
         {
-            position = new Vector2(
-                rnd.Next(Screen.Width - 64),
-                rnd.Next(Screen.Height - 64));
+            while (true)
+            {
+                position = new Vector2(
+                    rnd.Next(Screen.Width -64),
+                    rnd.Next(Screen.Height - 64));
+
+                if (position.X > 450)
+                {
+                    break;
+                }
+                if (position.X < 150)
+                {
+                    break;
+                }
+                if (position.Y> 550)
+                {
+                    break;
+                }
+                if (position.Y < 250)
+                {
+                    break;
+                }
+            }
+            
             velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
         }
 
@@ -62,7 +83,9 @@ namespace Oikake.Actor
             {
                 velocity.Y *= -1;
             }
+            
             position += velocity;
+
         }
 
         public override void Hit(Character other)
