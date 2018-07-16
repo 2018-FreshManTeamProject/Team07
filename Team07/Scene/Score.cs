@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Oikake.Device;
 using Microsoft.Xna.Framework;
+using Oikake.Util;
 
 namespace Oikake.Scene
 {
@@ -12,14 +13,19 @@ namespace Oikake.Scene
     {
         private int poolScore;
         private int score;
+        //private Timer timerScore;
+        //private bool boolTime;
+        
 
         public void Add()
         {
-            poolScore = poolScore += 1;
+            poolScore = poolScore += 0;
         }
         public void Add(int num)
         {
-            poolScore += num;
+
+           
+            poolScore = num;
         }
 
         public void Draw(Renderer renderer)
@@ -33,8 +39,16 @@ namespace Oikake.Scene
 
         public void Initialize()
         {
+<<<<<<< HEAD
             score = 600;
             poolScore -= 0;
+=======
+            //timerScore = new CountDownTimer(poolScore);
+            
+            score = 1000;
+            poolScore = 0;
+           // boolTime = true;
+>>>>>>> fumie
         }
 
         public Score()
@@ -52,11 +66,18 @@ namespace Oikake.Scene
 
         public void Update(GameTime gameTime)
         {
-            if(poolScore > 0)
+
+            if(poolScore >= 0)
             {
                 score -= 1;
+<<<<<<< HEAD
                 poolScore += 0;
+=======
+                poolScore -= 0;
+>>>>>>> fumie
             }
+            
+            
           
             
         }
