@@ -39,8 +39,16 @@ namespace Oikake.Scene
 
         public void Initialize()
         {
+<<<<<<< HEAD
             score = 600;
             poolScore -= 0;
+=======
+            //timerScore = new CountDownTimer(poolScore);
+            
+            score = 1000;
+            poolScore = 0;
+           // boolTime = true;
+>>>>>>> fumie
         }
 
         public Score()
@@ -62,6 +70,11 @@ namespace Oikake.Scene
             if(poolScore >= 0)
             {
                 score -= 1;
+<<<<<<< HEAD
+                poolScore += 0;
+=======
+                poolScore -= 0;
+>>>>>>> fumie
             }
             
             

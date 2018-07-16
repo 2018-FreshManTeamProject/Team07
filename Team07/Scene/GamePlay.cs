@@ -70,10 +70,10 @@ namespace Oikake.Scene
             characterManager.Add(new Player(this));
             characterManager.Add(new BoundEnemy(this));
 
-            for (int i = 0; i < 500; i++)
+            for (int i = 0; i < 1; i++)
             {
-                characterManager.Add(new BoundEnemy(this));
-
+                characterManager.Add(new RandomEnemy(this));
+                
             }
             
             timer = new CountUpTimer(1000);

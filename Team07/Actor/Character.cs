@@ -52,12 +52,6 @@ namespace Oikake.Actor
             return false;
         }
 
-        public void SetPosition(Vector2 other)
-        {
-            other = position;
-        }
-
-       
-
+        
     }
 }
