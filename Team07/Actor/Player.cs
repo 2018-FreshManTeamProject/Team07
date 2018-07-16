@@ -24,7 +24,7 @@ namespace Oikake.Actor
         };
         private Direction direction;
         private Vector2 stepVelocity;
-        private float stepTime = 0.47f;
+        private float stepTime =0.5f;
         private Timer stepTimer;
         private bool stepRelease;
 
@@ -34,7 +34,7 @@ namespace Oikake.Actor
 
         private Dictionary<Direction, Range> directionRange;
 
-        public Player(IGameMediator mediator) : base("oikake_player_4anime",mediator)
+        public Player(IGameMediator mediator) : base("renbanPlayer", mediator)
         {
             position = Vector2.Zero;
         }
@@ -43,9 +43,24 @@ namespace Oikake.Actor
             position = new Vector2(300, 400);
             motion = new Motion();
 
-            for(int i = 0;i<16;i++)
+            //下向き
+            for (int i = 0; i < 4; i++)
             {
-                motion.Add(i, new Rectangle(64 * (i%4), 64 * (i/4), 64, 64));
+                motion.Add(i, new Rectangle(32 * (i % 4), 32 * (i / 4), 32, 32));
+            }
+            //上向き
+            for (int i = 4; i < 8; i++)
+                motion.Add(i, new Rectangle(32 * (i % 4), 32 * (i / 4), 32, 32));
+
+            //右向き
+            for (int i = 8; i < 12; i++)
+            {
+                motion.Add(i, new Rectangle(32 * (i % 4), 32 * (i / 4), 32, 32));
+            }
+            //左向き
+            for (int i = 12; i < 16; i++)
+            {
+                motion.Add(i, new Rectangle(32 * (i % 4), 32 * (i / 4), 32, 32));
             }
 
             motion.Initialize(new Range(0, 3), new CountDownTimer(0.2f));
@@ -94,7 +109,7 @@ namespace Oikake.Actor
 
 
             var min = Vector2.Zero;
-            var max = new Vector2(Screen.Width - 64, Screen.Height - 64);
+            var max = new Vector2(Screen.Width - 32, Screen.Height - 32);
             position = Vector2.Clamp(position, min, max);
 
             UpdateMotion();
