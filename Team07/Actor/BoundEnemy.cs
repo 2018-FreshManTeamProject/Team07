@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Oikake.Def;
 using Oikake.Scene;
 using Oikake.Device;
+using Oikake.Util;
 
 namespace Oikake.Actor
 {
@@ -15,9 +16,10 @@ namespace Oikake.Actor
         private Vector2 velocity;
         private static Random rnd = new Random();
         private Sound sound;
+        private Timer timer = new CountUpTimer();
         
 
-        public BoundEnemy(IGameMediator mediator) : base ("black",mediator)
+        public BoundEnemy(IGameMediator mediator) : base ("エネミー（通常）", mediator)
         {
             velocity = Vector2.Zero;
             var gameDevice = GameDevice.Instance();
@@ -29,7 +31,7 @@ namespace Oikake.Actor
             position = new Vector2(
                 rnd.Next(Screen.Width - 64),
                 rnd.Next(Screen.Height - 64));
-            velocity = new Vector2(-10f, 0);
+            velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
         }
 
         public override void Shutdown()
@@ -39,13 +41,26 @@ namespace Oikake.Actor
 
         public override void Update(GameTime gameTime)
         {
-            if(position.X <0)
+            Random rnd = new Random();
+            //左壁の当たり判定
+            if(position.X <0.0f)
             {
-                velocity = -velocity;
+                velocity.X *= -1;
             }
-            if (position.X > Screen.Width - 64)
+            //右壁の当たり判定
+          else  if (position.X > Screen.Width-64)
             {
-                velocity = -velocity;
+                velocity.X *= -1;
+            }
+            //上の壁
+            if (position.Y <0.0f)
+            {
+                velocity.Y *= -1;
+            }
+            //下の壁
+           else if(position.Y>Screen.Height-64)
+            {
+                velocity.Y *= -1;
             }
             position += velocity;
         }

@@ -68,7 +68,6 @@ namespace Oikake.Scene
 
             characterManager = new CharacterManager();
             characterManager.Add(new Player(this));
-            characterManager.Add(new Enemy(this));
             characterManager.Add(new BoundEnemy(this));
 
             for (int i = 0; i < 1; i++)

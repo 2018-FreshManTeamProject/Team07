@@ -44,7 +44,7 @@ namespace Oikake.Actor
         public bool IsCollision( Character other)
         {
             float length = (position - other.position).Length();
-            float radiusSum = 32f + 32f;
+            float radiusSum = 16f + 16f;
             if( length <= radiusSum)
             {
                 return true;

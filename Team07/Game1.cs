@@ -92,6 +92,10 @@ namespace Oikake
             renderer.LoadContent("pipo-btleffect");
             renderer.LoadContent("oikake_player_4anime");
             renderer.LoadContent("puddle");
+            renderer.LoadContent("renbanPlayer");
+            renderer.LoadContent("エネミー（通常）");
+           
+          
 
             Texture2D fade = new Texture2D(GraphicsDevice, 1, 1);
             Color[] colors = new Color[1 * 1];
