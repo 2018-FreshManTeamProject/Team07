@@ -29,7 +29,11 @@ namespace Oikake.Actor
         private bool stepRelease;
 
 
-        
+
+        //private bool isEndFlag;
+        //private CharacterManager characterManager;
+
+        public bool dead = false;
 
 
         private Dictionary<Direction, Range> directionRange;
@@ -85,12 +89,17 @@ namespace Oikake.Actor
                 stepVelocity = Input.Velocity();
                 stepRelease = false;
                 stepTimer.Initialize();
+                
 
             }
+            //characterManager.Update(gameTime);
+            //if (characterManager.HitToCharacters() == true)
+            //{
+                
+            //}
 
-
-           
             
+
 
 
             var min = Vector2.Zero;
@@ -109,12 +118,12 @@ namespace Oikake.Actor
         //}
         public override void Shutdown()
         {
-
+            
         }
 
         public override void Hit(Character other)
         {
-            
+            dead = true;
         }
 
         public override void Draw(Renderer renderer)

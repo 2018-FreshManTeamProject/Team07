@@ -13,7 +13,9 @@ namespace Oikake.Actor
         private List<Character> players;
         private List<Character> enemys;
         private List<Character> addNewCharacters;
-
+        private bool isEndFlag;
+        
+        public List<Character> Players { get { return players; } }
         public CharacterManager()
         {
             Initialize();
@@ -46,6 +48,7 @@ namespace Oikake.Actor
             {
                 addNewCharacters = new List<Character>();
             }
+            isEndFlag = false;
         }
 
         public void Add(Character character)
@@ -57,7 +60,7 @@ namespace Oikake.Actor
             addNewCharacters.Add(character);
         }
 
-        private void HitToCharacters()
+        public bool HitToCharacters()
         {
             foreach(var player in players)
             {
@@ -71,9 +74,13 @@ namespace Oikake.Actor
                     {
                         player.Hit(enemy);
                         enemy.Hit(player);
+                        
+                        
+
                     }
                 }
             }
+            return true;
         }
 
         private void RemoveDeadCharacter()
@@ -108,6 +115,8 @@ namespace Oikake.Actor
             addNewCharacters.Clear();
             HitToCharacters();
             RemoveDeadCharacter();
+
+            
         }
 
         public void Draw(Renderer renderer)

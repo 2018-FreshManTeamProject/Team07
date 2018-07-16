@@ -113,8 +113,15 @@ namespace Oikake.Scene
                 score.Shutdown();
                 isEndFlag = true;
              }
+             
+            foreach(var l in characterManager.Players)
+            {
+                if (l is Player && ((Player)l).dead)
+                {
+                    isEndFlag = true;
+                }
+            }
 
-            
         }
 
     }

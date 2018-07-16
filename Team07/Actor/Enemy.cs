@@ -33,6 +33,7 @@ namespace Oikake.Actor
         public override void Update(GameTime gameTime)
         {
             position += new Vector2(rnd.Next(-1, 2), rnd.Next(-1,2));
+            
         }
 
         public override void Shutdown()
