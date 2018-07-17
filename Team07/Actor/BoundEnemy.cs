@@ -29,8 +29,8 @@ namespace Oikake.Actor
         public override void Initialize()
         {
             position = new Vector2(
-                rnd.Next(Screen.Width - 64),
-                rnd.Next(Screen.Height - 64));
+                Screen.Width /2,
+                Screen.Height /2);
             velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
         }
 
@@ -60,6 +60,13 @@ namespace Oikake.Actor
             //下の壁
            else if(position.Y>Screen.Height-64)
             {
+                velocity.Y *= -1;
+            }
+            Vector2 vector = new Vector2(Screen.Width / 2, Screen.Height / 2);
+            float length = (position - vector).Length();
+            if (Screen.Radius - 12 < length)
+            {
+                velocity.X *= -1;
                 velocity.Y *= -1;
             }
             position += velocity;

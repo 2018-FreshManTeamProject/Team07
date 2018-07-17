@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Oikake.Device;
 using Oikake.Actor;
 using Oikake.Util;
+using Oikake.Def;
 
 namespace Oikake.Scene
 {
@@ -45,7 +46,7 @@ namespace Oikake.Scene
         public void Draw(Renderer renderer)
         {
             renderer.Begin();
-            renderer.DrawTexture("stage",Vector2.Zero);
+            renderer.DrawTexture("hurasuko", new Vector2(Screen.Width/2,Screen.Height/2)-new Vector2(480,730));
             characterManager.Draw(renderer);
 
             score.Draw(renderer);
@@ -70,11 +71,7 @@ namespace Oikake.Scene
             characterManager.Add(new Player(this));
             characterManager.Add(new BoundEnemy(this));
 
-            for (int i = 0; i < 1; i++)
-            {
-                characterManager.Add(new RandomEnemy(this));
-                
-            }
+          
             
             timer = new CountUpTimer(1000);
             timerUI = new TimerUI(timer);
