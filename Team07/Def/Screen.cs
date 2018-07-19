@@ -10,6 +10,6 @@ namespace Oikake.Def
     {
         public static readonly int Width = 1920;
         public static readonly int Height = 1080;
-        public static readonly float Radius = 475;
+        public static readonly float Radius = 480;
     }
 }

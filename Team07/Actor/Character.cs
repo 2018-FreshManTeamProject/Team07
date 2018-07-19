@@ -38,7 +38,7 @@ namespace Oikake.Actor
 
         public virtual void Draw (Renderer renderer)
         {
-            renderer.DrawTexture(name, position);
+            renderer.DrawTexture(name, position-new Vector2(12,12));
         }
 
         public bool IsCollision( Character other)

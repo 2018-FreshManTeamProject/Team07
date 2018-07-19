@@ -46,7 +46,7 @@ namespace Oikake.Scene
         public void Draw(Renderer renderer)
         {
             renderer.Begin();
-            renderer.DrawTexture("hurasuko", new Vector2(Screen.Width/2,Screen.Height/2)-new Vector2(480,730));
+            renderer.DrawTexture("hurasuko", new Vector2(Screen.Width / 2, Screen.Height / 2) - new Vector2(480, 770)); ;
             characterManager.Draw(renderer);
 
             score.Draw(renderer);
@@ -69,8 +69,10 @@ namespace Oikake.Scene
 
             characterManager = new CharacterManager();
             characterManager.Add(new Player(this));
-            characterManager.Add(new BoundEnemy(this));
-
+            for (int i = 0; i < 10; i++)
+            {
+                characterManager.Add(new BoundEnemy(this));
+            }
           
             
             timer = new CountUpTimer(1000);
