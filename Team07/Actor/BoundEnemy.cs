@@ -17,9 +17,9 @@ namespace Oikake.Actor
         private static Random rnd = new Random();
         private Sound sound;
         private Timer timer = new CountUpTimer();
-        
 
-        public BoundEnemy(IGameMediator mediator) : base ("エネミー（通常）", mediator)
+
+        public BoundEnemy(IGameMediator mediator) : base("エネミー（通常）", mediator)
         {
             velocity = Vector2.Zero;
             var gameDevice = GameDevice.Instance();
@@ -28,37 +28,61 @@ namespace Oikake.Actor
 
         public override void Initialize()
         {
-            position = new Vector2(
-                rnd.Next(Screen.Width - 64),
-                rnd.Next(Screen.Height - 64));
-            velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
+           
+            while (true)
+            {
+                 position = new Vector2(
+                    rnd.Next(Screen.Width - 24),
+                    rnd.Next(Screen.Height - 24));
+               
+                if(position.X<200)
+                {
+                    break;
+                }
+                else if(position.X>450)
+                {
+                    break;
+                }
+                else if(position.Y<350)
+                {
+                    break;
+                }
+                else if(position.Y>550)
+                {
+                    break;
+                }
+
+            } 
+           
+               velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
+
         }
 
         public override void Shutdown()
         {
-            
+
         }
 
         public override void Update(GameTime gameTime)
         {
             Random rnd = new Random();
             //左壁の当たり判定
-            if(position.X <0.0f)
+            if (position.X < 0.0f)
             {
                 velocity.X *= -1;
             }
             //右壁の当たり判定
-          else  if (position.X > Screen.Width-64)
+            else if (position.X > Screen.Width - 64)
             {
                 velocity.X *= -1;
             }
             //上の壁
-            if (position.Y <0.0f)
+            if (position.Y < 0.0f)
             {
                 velocity.Y *= -1;
             }
             //下の壁
-           else if(position.Y>Screen.Height-64)
+            else if (position.Y > Screen.Height - 64)
             {
                 velocity.Y *= -1;
             }
