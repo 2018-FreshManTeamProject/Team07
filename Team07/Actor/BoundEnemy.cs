@@ -88,17 +88,18 @@ namespace Oikake.Actor
             //下の壁
             else if (position.Y > Screen.Height - 64)
             {
-            //フラスコの円の当たり判定
+                //フラスコの円の当たり判定
 
 
-            Vector2 vector = new Vector2(Screen.Width / 2, Screen.Height / 2);
-            float length = (position - vector).Length();
-            if (Screen.Radius -12< length)
-            {
-                velocity.X *= -1;
-                velocity.Y *= -1;
+                Vector2 vector = new Vector2(Screen.Width / 2, Screen.Height / 2);
+                float length = (position - vector).Length();
+                if (Screen.Radius - 12 < length)
+                {
+                    velocity.X *= -1;
+                    velocity.Y *= -1;
+                }
+                position += velocity;
             }
-            position += velocity;
         }
 
         public override void Hit(Character other)
