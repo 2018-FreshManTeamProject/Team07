@@ -56,6 +56,10 @@ namespace Oikake.Actor
            
                velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
 
+            position = new Vector2(
+                rnd.Next(600,1200),
+                rnd.Next(200,500));
+            velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
         }
 
         public override void Shutdown()
@@ -84,6 +88,14 @@ namespace Oikake.Actor
             //下の壁
             else if (position.Y > Screen.Height - 64)
             {
+            //フラスコの円の当たり判定
+
+
+            Vector2 vector = new Vector2(Screen.Width / 2, Screen.Height / 2);
+            float length = (position - vector).Length();
+            if (Screen.Radius -12< length)
+            {
+                velocity.X *= -1;
                 velocity.Y *= -1;
             }
             position += velocity;
@@ -94,8 +106,10 @@ namespace Oikake.Actor
 
             isDeadFlag = true;
             mediator.AddScore(100);
-            mediator.AddActor(new BoundEnemy(mediator));
-            mediator.AddActor(new BoundEnemy(mediator));
+            for (int i = 0; i < 20; i++)
+            {
+                mediator.AddActor(new BoundEnemy(mediator));
+            }
             //mediator.AddActor(new BurstEffect(position, mediator));
             sound.PlaySE("gameplayse");
 

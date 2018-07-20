@@ -28,11 +28,6 @@ namespace Oikake.Actor
         private Timer stepTimer;
         private bool stepRelease;
 
-
-
-        //private bool isEndFlag;
-        //private CharacterManager characterManager;
-
         public bool dead = false;
 
 
@@ -44,7 +39,7 @@ namespace Oikake.Actor
         }
         public override void Initialize()
         {
-            position = new Vector2(300, 400);
+            position = new Vector2(Screen.Width/2,Screen.Height/2)+new Vector2(0,480-32);
             motion = new Motion();
 
             //下向き
@@ -94,6 +89,22 @@ namespace Oikake.Actor
             }
            
             position = position + Input.Velocity() * speed;
+            Vector2 vector = new Vector2(Screen.Width / 2, Screen.Height / 2);
+            float length = (position - vector).Length();
+
+
+            if(Screen.Radius-16<length && position.Y > 85.0f)
+            {
+                position = position - Input.Velocity() * speed;
+               
+
+            }
+
+            else if(position.Y <= 85.0f)
+            {
+                position.X = MathHelper.Clamp(position.X, Screen.Width / 2 - 250 / 2, Screen.Width / 2 + 250/ 2);
+            }
+           
             if (Input.Velocity() == new Vector2(0, 0))
             {
                 stepRelease = true;
@@ -107,20 +118,7 @@ namespace Oikake.Actor
                 
 
             }
-            //characterManager.Update(gameTime);
-            //if (characterManager.HitToCharacters() == true)
-            //{
-                
-            //}
-
-            
-
-
-
-            var min = Vector2.Zero;
-            var max = new Vector2(Screen.Width - 32, Screen.Height - 32);
-            position = Vector2.Clamp(position, min, max);
-
+        
             UpdateMotion();
             motion.Update(gameTime);
 

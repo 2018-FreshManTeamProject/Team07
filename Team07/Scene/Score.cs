@@ -42,6 +42,7 @@ namespace Oikake.Scene
 
             score = 600;
             poolScore -= 0;
+            
         }
 
         public Score()

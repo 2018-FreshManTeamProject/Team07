@@ -94,7 +94,8 @@ namespace Oikake
             renderer.LoadContent("puddle");
             renderer.LoadContent("renbanPlayer");
             renderer.LoadContent("エネミー（通常）");
-           
+            renderer.LoadContent("hurasuko");
+            renderer.LoadContent("renbanPlayer");
           
 
             Texture2D fade = new Texture2D(GraphicsDevice, 1, 1);
