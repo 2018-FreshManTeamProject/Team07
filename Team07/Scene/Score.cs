@@ -43,8 +43,6 @@ namespace Oikake.Scene
             score = 600;
             poolScore -= 0;
             
-            score = 1000;
-            poolScore = 0;
         }
 
         public Score()
@@ -66,8 +64,6 @@ namespace Oikake.Scene
             if(poolScore >= 0)
             {
                 score -= 1;
-                poolScore += 0;
-                poolScore -= 0;
             }
             
             
