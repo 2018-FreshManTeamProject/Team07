@@ -27,10 +27,8 @@ namespace Oikake.Actor
         private float stepTime =0.5f;
         private Timer stepTimer;
         private bool stepRelease;
-
+        private Vector2 velocity = Vector2.Zero;
         public bool dead = false;
-
-
         private Dictionary<Direction, Range> directionRange;
 
         public Player(IGameMediator mediator) : base("renbanPlayer", mediator)
@@ -81,30 +79,29 @@ namespace Oikake.Actor
         {
             stepTimer.Update(gameTime);
             float speed = 5.0f;
-            
             if(stepVelocity == Input.Velocity() && stepRelease == true && stepTimer.IsTime() == false )
             {
                 speed = 100;
-                
             }
            
             position = position + Input.Velocity() * speed;
             Vector2 vector = new Vector2(Screen.Width / 2, Screen.Height / 2);
             float length = (position - vector).Length();
 
-
-            if(Screen.Radius-16<length && position.Y > 85.0f)
-            {
+            if (Screen.Radius-16<length && position.Y > 85.0f)
+            { 
                 position = position - Input.Velocity() * speed;
-               
-
             }
 
             else if(position.Y <= 85.0f)
             {
                 position.X = MathHelper.Clamp(position.X, Screen.Width / 2 - 250 / 2, Screen.Width / 2 + 250/ 2);
             }
-           
+            else if (Input.Velocity().X == 0 && Input.Velocity().Y == 0)
+            {
+                position.Y += 0.5f;
+            }
+
             if (Input.Velocity() == new Vector2(0, 0))
             {
                 stepRelease = true;
@@ -115,20 +112,13 @@ namespace Oikake.Actor
                 stepVelocity = Input.Velocity();
                 stepRelease = false;
                 stepTimer.Initialize();
-                
-
             }
-        
             UpdateMotion();
             motion.Update(gameTime);
 
 
 
         } 
-        //public void Draw(Renderer renderer)
-        //{
-        //    renderer.DrawTexture("white", position);
-        //}
         public override void Shutdown()
         {
             

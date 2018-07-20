@@ -44,6 +44,7 @@
     <Compile Include="Actor\BoundEnemy.cs" />
     <Compile Include="Actor\Character.cs" />
     <Compile Include="Actor\CharacterManager.cs" />
+    <Compile Include="Scene\GoodEnding.cs" />
     <Compile Include="Util\CountDownTimer.cs" />
     <Compile Include="Util\CountUpTimer.cs" />
     <Compile Include="Scene\Ending.cs" />

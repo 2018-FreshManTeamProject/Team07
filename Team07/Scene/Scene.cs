@@ -10,6 +10,7 @@ namespace Oikake.Scene
     {
         Title,
         GamePlay,
-        Ending
+        Ending,
+        GoodEnding
     }
 }
