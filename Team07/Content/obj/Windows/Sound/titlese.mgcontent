@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>D:/学校/電算部/Team07/Team07/Content/Sound/titlese.wav</SourceFile>
+  <SourceTime>2018-07-18T19:11:34.2006342+09:00</SourceTime>
+  <DestFile>D:/学校/電算部/Team07/Team07/Content/bin/Windows/Sound/titlese.xnb</DestFile>
+  <DestTime>2018-07-20T18:16:04.4072823+09:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2017-03-02T00:05:36+09:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

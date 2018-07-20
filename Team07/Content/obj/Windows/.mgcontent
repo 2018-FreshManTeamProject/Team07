@@ -4,25 +4,33 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/white.BMP</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/black.BMP</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/stage.BMP</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/title.BMP</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/ending.BMP</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/number.bmp</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/score.bmp</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/timer.bmp</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/oikake_player_4anime.bmp</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/puddle.png</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/pipo-btleffect.png</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/Sound/endingbgm.mp3</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/Sound/endingse.wav</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/Sound/gameplaybgm.mp3</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/Sound/gameplayse.wav</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/Sound/titlebgm.mp3</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/Sound/titlese.wav</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/PUSH　SPACE  KEY.png</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/エネミー（通常）.png</File>
-    <File>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/renbanPlayer.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/white.BMP</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/black.BMP</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/stage.BMP</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/title.BMP</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/ending.BMP</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/number.bmp</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/score.bmp</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/timer.bmp</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/oikake_player_4anime.bmp</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/puddle.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/pipo-btleffect.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/Sound/endingbgm.mp3</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/Sound/endingse.wav</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/Sound/gameplaybgm.mp3</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/Sound/gameplayse.wav</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/Sound/titlebgm.mp3</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/Sound/titlese.wav</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/PUSH　SPACE  KEY.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/エネミー（通常）.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/renbanPlayer.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/hurasuko.png</File>
+    <File>C:/Users/kinka/OneDrive/画像/素材/Team07/renbanPlayer.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/taitle.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/おわる.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/ゲームオーバーpsd.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/コンティニュー.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/ステージクリア.png</File>
+    <File>D:/学校/電算部/Team07/Team07/Content/トータルスコア.png</File>
   </SourceFiles>
 </SourceFileCollection>

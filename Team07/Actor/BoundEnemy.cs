@@ -28,37 +28,10 @@ namespace Oikake.Actor
 
         public override void Initialize()
         {
-           
-            while (true)
-            {
-                 position = new Vector2(
-                    rnd.Next(Screen.Width - 24),
-                    rnd.Next(Screen.Height - 24));
-               
-                if(position.X<200)
-                {
-                    break;
-                }
-                else if(position.X>450)
-                {
-                    break;
-                }
-                else if(position.Y<350)
-                {
-                    break;
-                }
-                else if(position.Y>550)
-                {
-                    break;
-                }
-
-            } 
-           
-               velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
 
             position = new Vector2(
-                rnd.Next(600,1200),
-                rnd.Next(200,500));
+                rnd.Next(600, 1200),
+                rnd.Next(200, 500));
             velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
         }
 
@@ -70,36 +43,20 @@ namespace Oikake.Actor
         public override void Update(GameTime gameTime)
         {
             Random rnd = new Random();
-            //左壁の当たり判定
-            if (position.X < 0.0f)
-            {
-                velocity.X *= -1;
-            }
-            //右壁の当たり判定
-            else if (position.X > Screen.Width - 64)
-            {
-                velocity.X *= -1;
-            }
-            //上の壁
-            if (position.Y < 0.0f)
-            {
-                velocity.Y *= -1;
-            }
-            //下の壁
-            else if (position.Y > Screen.Height - 64)
-            {
-            //フラスコの円の当たり判定
+         
+                //フラスコの円の当たり判定
 
 
-            Vector2 vector = new Vector2(Screen.Width / 2, Screen.Height / 2);
-            float length = (position - vector).Length();
-            if (Screen.Radius -12< length)
-            {
-                velocity.X *= -1;
-                velocity.Y *= -1;
+                Vector2 vector = new Vector2(Screen.Width / 2, Screen.Height / 2);
+                float length = (position - vector).Length();
+                if (Screen.Radius - 12 < length)
+                {
+                    velocity.X *= -1;
+                    velocity.Y *= -1;
+                }
+                position += velocity;
             }
-            position += velocity;
-        }
+        
 
         public override void Hit(Character other)
         {
