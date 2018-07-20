@@ -20,6 +20,7 @@ namespace Oikake.Scene
         private TimerUI timerUI;
         private bool isEndFlag;
         private Sound sound;
+        private Player player;
 
         public GamePlay()
         {
@@ -46,20 +47,12 @@ namespace Oikake.Scene
         public void Draw(Renderer renderer)
         {
             renderer.Begin();
-            renderer.DrawTexture("hurasuko", new Vector2(Screen.Width / 2, Screen.Height / 2) - new Vector2(480, 770)); ;
+            renderer.DrawTexture("hurasuko", new Vector2(Screen.Width / 2, Screen.Height / 2) - new Vector2(470, 770)); ;
             characterManager.Draw(renderer);
 
             score.Draw(renderer);
 
             timerUI.Draw(renderer);
-           
-            //if(timer.IsTime())
-            //{
-            //    renderer.DrawTexture("ending", new Vector2(150, 150));
-            //}
-           
-
-           
             renderer.End();
         }
 
@@ -71,7 +64,7 @@ namespace Oikake.Scene
             characterManager.Add(new Player(this));
             characterManager.Add(new BoundEnemy(this));
 
-            for (int i = 0; i < 500; i++)
+            for (int i = 0; i < 20; i++)
             {
                 characterManager.Add(new BoundEnemy(this));
             }
@@ -91,7 +84,11 @@ namespace Oikake.Scene
 
         public Scene Next()
         {
-            return Scene.Ending;
+            
+            
+                return Scene.Ending;
+            
+        
         }
 
         public void Shutdown()

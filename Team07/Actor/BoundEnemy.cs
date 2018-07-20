@@ -28,37 +28,10 @@ namespace Oikake.Actor
 
         public override void Initialize()
         {
-           
-            while (true)
-            {
-                 position = new Vector2(
-                    rnd.Next(Screen.Width - 24),
-                    rnd.Next(Screen.Height - 24));
-               
-                if(position.X<200)
-                {
-                    break;
-                }
-                else if(position.X>450)
-                {
-                    break;
-                }
-                else if(position.Y<350)
-                {
-                    break;
-                }
-                else if(position.Y>550)
-                {
-                    break;
-                }
-
-            } 
-           
-               velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
 
             position = new Vector2(
-                rnd.Next(600,1200),
-                rnd.Next(200,500));
+                rnd.Next(600, 1200),
+                rnd.Next(200, 500));
             velocity = new Vector2(rnd.Next(1, 3), rnd.Next(1, 3));
         }
 

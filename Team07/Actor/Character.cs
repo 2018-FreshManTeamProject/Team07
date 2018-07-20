@@ -38,13 +38,13 @@ namespace Oikake.Actor
 
         public virtual void Draw (Renderer renderer)
         {
-            renderer.DrawTexture(name, position-new Vector2(12,12));
+            renderer.DrawTexture(name, position);
         }
 
         public bool IsCollision( Character other)
         {
             float length = (position - other.position).Length();
-            float radiusSum = 16f + 16f;
+            float radiusSum = 12f + 12f;
             if( length <= radiusSum)
             {
                 return true;

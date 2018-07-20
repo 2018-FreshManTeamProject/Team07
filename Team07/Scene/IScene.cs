@@ -8,7 +8,7 @@ using Oikake.Device;
 
 namespace Oikake.Scene
 {
-    interface IScene
+   interface IScene
     {
         void Initialize();
         void Update(GameTime gameTime);

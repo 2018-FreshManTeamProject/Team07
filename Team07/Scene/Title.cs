@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using Oikake.Device;
 using Oikake.Util;
+using Oikake.Def;
 
 namespace Oikake.Scene
 {
@@ -25,9 +26,8 @@ namespace Oikake.Scene
         public void Draw(Renderer renderer)
         {
             renderer.Begin();
-            renderer.DrawTexture("title", Vector2.Zero);
-            renderer.DrawTexture("puddle", new Vector2(200,370),
-                motion.DrawingRange());
+            renderer.DrawTexture("taitle", new Vector2(0,0));
+            renderer.DrawTexture("PUSH　SPACE  KEY", new Vector2(Screen.Width / 2, Screen.Height / 2) + new Vector2(-250, 200));
             renderer.End();
         }
 

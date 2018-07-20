@@ -96,6 +96,9 @@ namespace Oikake
             renderer.LoadContent("エネミー（通常）");
             renderer.LoadContent("hurasuko");
             renderer.LoadContent("renbanPlayer");
+            renderer.LoadContent("taitle");
+            renderer.LoadContent("PUSH　SPACE  KEY");
+            renderer.LoadContent("ステージクリア");
           
 
             Texture2D fade = new Texture2D(GraphicsDevice, 1, 1);
