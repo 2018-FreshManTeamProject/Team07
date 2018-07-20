@@ -74,8 +74,6 @@ namespace Oikake.Actor
                     {
                         player.Hit(enemy);
                         enemy.Hit(player);
-                        
-                        
 
                     }
                 }

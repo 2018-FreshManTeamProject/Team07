@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/game_scene3.mp3</SourceFile>
-  <SourceTime>2018-07-20T18:34:51.2581055+09:00</SourceTime>
-  <DestFile>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/bin/Windows/game_scene3.xnb</DestFile>
-  <DestTime>2018-07-20T18:41:50.8323275+09:00</DestTime>
+  <SourceFile>D:/学校/電算部/Team07/Team07/Content/game_scene3.mp3</SourceFile>
+  <SourceTime>2018-07-20T18:47:31.2487245+09:00</SourceTime>
+  <DestFile>D:/学校/電算部/Team07/Team07/Content/bin/Windows/game_scene3.xnb</DestFile>
+  <DestTime>2018-07-20T18:48:06.8026637+09:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
   <Processor>SongProcessor</Processor>
@@ -15,6 +15,6 @@
   <Dependencies />
   <BuildAsset />
   <BuildOutput>
-    <string>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/bin/Windows/game_scene3.wma</string>
+    <string>D:/学校/電算部/Team07/Team07/Content/bin/Windows/game_scene3.wma</string>
   </BuildOutput>
 </PipelineBuildEvent>
