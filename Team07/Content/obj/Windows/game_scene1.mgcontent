@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/game_scene1.mp3</SourceFile>
-  <SourceTime>2018-07-20T18:34:51.186298+09:00</SourceTime>
+  <SourceTime>2018-07-20T18:46:31.635179+09:00</SourceTime>
   <DestFile>C:/Users/k018A2140/Desktop/DensanProject/Team07/Content/bin/Windows/game_scene1.xnb</DestFile>
-  <DestTime>2018-07-20T18:41:47.913417+09:00</DestTime>
+  <DestTime>2018-07-20T19:00:11.1586931+09:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2017-03-02T00:05:36+09:00</ImporterTime>
   <Processor>SongProcessor</Processor>

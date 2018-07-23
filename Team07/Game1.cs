@@ -99,6 +99,7 @@ namespace Oikake
             renderer.LoadContent("taitle");
             renderer.LoadContent("PUSH　SPACE  KEY");
             renderer.LoadContent("ステージクリア");
+            renderer.LoadContent("haikei");
           
 
             Texture2D fade = new Texture2D(GraphicsDevice, 1, 1);
