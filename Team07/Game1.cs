@@ -99,7 +99,7 @@ namespace Oikake
             renderer.LoadContent("taitle");
             renderer.LoadContent("PUSH　SPACE  KEY");
             renderer.LoadContent("ステージクリア");
-          
+            renderer.LoadContent("haikeiii");
 
             Texture2D fade = new Texture2D(GraphicsDevice, 1, 1);
             Color[] colors = new Color[1 * 1];
