@@ -48,7 +48,7 @@ namespace Oikake.Scene
         public void Draw(Renderer renderer)
         {
             renderer.Begin();
-            renderer.DrawTexture("haikei", new Vector2(0, 0));
+            renderer.DrawTexture("haikeiii", new Vector2(0, 0));
             renderer.DrawTexture("hurasuko", new Vector2(Screen.Width / 2, Screen.Height / 2) - new Vector2(470, 770)); ;
             
             characterManager.Draw(renderer);
